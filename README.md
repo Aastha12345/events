@@ -10,14 +10,14 @@
 
 |           Index page                |         Index page                   |
 | ------------------------------------| -------------------------------------|
-| ![alt-text-1](./images/.png)| ![alt-text-2](./images/.png)|
+| ![alt-text-1](./public/addnewevent.png)| ![alt-text-2](./public/eventdetails.png)|
 
 <br>
 <br>
 
 |           Login page                |         Register page                |
 | ----------------------------------- | ------------------------------------ |
-| ![alt-text-1](./images/login.png)   | ![alt-text-2](./images/register.png) |
+| ![alt-text-1](./public/login.png)   | ![alt-text-2](./public/register.png) |
 
 <br>
 

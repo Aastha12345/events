@@ -1,0 +1,70 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Story Edit</title>
+</head>
+
+
+<body>
+
+    <div class=" container text-center" style="border:2px solid black;width:900px;padding-left: 30px;padding-right:30px;">
+        
+        <div>
+            <h2>    MY STORY      </h2>
+        </div>
+
+                    <form action='/story/edit/<%= story._id %>' method="POST">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="title">Title</label>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div>
+                                <input class="col-md-12" style="margin-bottom:20px;height:30px;border-radius: 20px;"><%= story.title %></input>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="description">Description</label>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div>
+                                <textarea rows="20" cols="100" class="col-md-12" style="margin-bottom:20px;border-radius: 20px;" name="description"><%= story.description %></textarea>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <a><button class="btn btn-primary">SAVE</button></a>
+                        </div>
+
+                    </form>
+    
+        </div>
+
+    </div>
+
+</body>
+</html>

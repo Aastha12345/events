@@ -1,0 +1,84 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Login</title>
+    <style>
+        div{
+            margin-bottom:10px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class=" container" style="border:2px solid black;margin-top:20px;margin-bottom:50px;width:500px">
+        
+           <div class="text-center">
+                <h2>    PROFILE     </h2>
+            </div>
+
+            <div class="container">            
+
+                <div class="row">
+                    <label for="firstname" class="col-md-2">First Name</label>
+                    <p class="col-md-4"><%= user.firstname  %></p> 
+                </div>
+            
+                <div class="row">
+                    <label for="lastname" class="col-md-2">Lastname</label>
+                    <p class="col-md-4"><%= user.lastname %></p> 
+                </div>
+            
+                <div class="row">
+                    <label for="email" class="col-md-2">Email</label>
+                    <p class="col-md-4"><%= user.email %></p> 
+                </div>
+
+                <div class="row">
+                    <label for="phonenumber" class="col-md-2">Phone Number</label>
+                    <p class="col-md-4"><%= user.phonenumber %></p> 
+                </div>
+
+                <div class="row">
+                    <label for="age" class="col-md-2">Age</label>
+                    <p class="col-md-4"><%= user.age %></p> 
+                </div>
+
+                <div class="row">
+                    <label for="gender" class="col-md-2">Gender</label>
+                    <p class="col-md-4"><%= user.gender %></p> 
+                </div>
+
+                <div class="row">
+                    <label for="birthdate" class="col-md-2">Birthdate</label>
+                    <p class="col-md-4"><%= (user.birthdate).toDateString() %></p> 
+                </div>
+
+                <div class="row">
+                    <label for="role" class="col-md-2">Role</label>
+                    <p class="col-md-4"><%= user.role %></p> 
+                </div>
+
+          </div>
+
+            <a href='/user/profile/edit/<%= currentUser._id %>' style="float:left;" class="text-center"><button class="btn btn-primary">EDIT</button></a>
+    
+    </div>
+
+        
+</body>
+</html>

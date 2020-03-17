@@ -1,0 +1,68 @@
+<%- include('partials/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        div{
+            margin-bottom:20px;
+        }
+        input {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color:#282726;
+        }
+        input:focus {
+            border-color: #0294A5;
+        }
+    </style>
+    
+    <title>Login</title>
+</head>
+
+
+<body>
+    <h3 style="background-color:wheat;" class="container text-center">
+        <%= typeof msg !='undefined'?msg:'' %>
+    </h3>
+
+    <div class=" container text-center" style="border:2px solid black;height:250px;margin-top:130px;margin-bottom:400px;width:1000px">
+        
+        <div><h2>    LOGIN      </h2></div>
+
+        <div>
+            <form action="/login" method="POST">
+            
+                <div class=container>
+
+                    <div class=row>
+                        <label for="username" class="col-md-3">Username:</label>
+                        <input type="text" name="username" class="col-md-6" placeholder="Enter Username">
+                    </div>
+
+                    <div class=row>
+                    <label for="password" class="col-md-3">Password:</label>
+                    <input type="text" name="password" class="col-md-6" placeholder="Enter Password">
+                    </div>
+
+                </div>
+
+                <div class=row>
+                    <button class="btn btn-success">Submit</button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+</body>
+</html>
